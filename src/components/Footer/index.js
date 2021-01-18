@@ -1,34 +1,122 @@
 import React from 'react'
-import { FooterData } from '../../Data/FooterData'
 import {
-    FooterSection,
-    FooterContainer,
-    FooterRow,
-    FooterColumn,
-    FooterUnOrderedList,
-    FooterListItem,
+    FooterContainer, 
+    FooterWrap, 
+    FooterLinksContainer, 
+    FooterLinksWrapper, 
+    FooterLinkItems, 
+    FooterLinkTitle, 
     FooterLink,
-    FooterH1
+    SocialIcons,
+    SocialIconLink,
+    SocialMedia,
+    SocialMediaWrap,
+    WebsiteRights,
+    SocialLogo
 } from './FooterElements'
-
+import {FaFacebook, FaInstagram, FaYoutube, FaTelegram} from 'react-icons/fa'
 const Footer = () => {
     return (
-        <FooterSection>
-            <FooterContainer>
-                <FooterRow>
-                    <FooterColumn>
-                        <FooterH1></FooterH1>
-                        <FooterUnOrderedList>
-                            {FooterData.map((footer, index) => (
-                                <FooterListItem key={index}>
-                                    <FooterLink to={footer.link}>{footer.title}</FooterLink>
-                                </FooterListItem>
-                            ))}
-                        </FooterUnOrderedList>
-                    </FooterColumn>
-                </FooterRow>
-            </FooterContainer>
-        </FooterSection>
+        <FooterContainer>
+            <FooterWrap>
+                <FooterLinksContainer>
+                    <FooterLinksWrapper>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>About US</FooterLinkTitle>
+                            
+                                <FooterLink to="/signin">
+                                    How we work
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Testimonials
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Careers
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Terms of Service
+                                </FooterLink>
+                            
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>About US</FooterLinkTitle>
+                            
+                                <FooterLink to="/signin">
+                                    How we work
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Testimonials
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Careers
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Terms of Service
+                                </FooterLink>
+                            
+                        </FooterLinkItems>
+                    </FooterLinksWrapper>
+                    <FooterLinksWrapper>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>About US</FooterLinkTitle>
+                            
+                                <FooterLink to="/signin">
+                                    How we work
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Testimonials
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Careers
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Terms of Service
+                                </FooterLink>
+                            
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Social Media</FooterLinkTitle>
+                            
+                                <FooterLink to="/signin">
+                                    Instagram
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Telegram
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Facebook
+                                </FooterLink>
+                                <FooterLink to="/signin">
+                                    Pinterest
+                                </FooterLink>
+                            
+                        </FooterLinkItems>
+                    </FooterLinksWrapper>
+                </FooterLinksContainer>
+                <SocialMedia>
+                    <SocialMediaWrap>
+                        <SocialLogo to="/">
+                            MENZ
+                        </SocialLogo>
+                        <WebsiteRights>MENZ &copy; {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+                        <SocialIcons>
+                            <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                                <FaFacebook></FaFacebook>
+                            </SocialIconLink>
+                            <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+                                <FaInstagram></FaInstagram>
+                            </SocialIconLink>
+                            <SocialIconLink href="/" target="_blank" aria-label="Telegram">
+                                <FaTelegram></FaTelegram>
+                            </SocialIconLink>
+                            <SocialIconLink href="/" target="_blank" aria-label="You Tube">
+                                <FaYoutube></FaYoutube>
+                            </SocialIconLink>
+                        </SocialIcons>
+                    </SocialMediaWrap>
+                </SocialMedia>
+            </FooterWrap>
+        </FooterContainer>
     )
 }
 
